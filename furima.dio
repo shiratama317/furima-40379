@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="uIaqq-WkH3nsD_MAtBWu" name="ページ1">
-        <mxGraphModel dx="404" dy="702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="800" dy="702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -21,7 +21,7 @@
                 <mxCell id="130" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="129" vertex="1">
                     <mxGeometry y="30" width="210" height="220" as="geometry"/>
                 </mxCell>
-                <mxCell id="131" value="&lt;ul&gt;&lt;li&gt;name&lt;/li&gt;&lt;li&gt;content&lt;/li&gt;&lt;li&gt;category&lt;/li&gt;&lt;li&gt;condition&lt;/li&gt;&lt;li&gt;shipping_fee&lt;/li&gt;&lt;li&gt;ship_from&lt;/li&gt;&lt;li&gt;ship_days&lt;/li&gt;&lt;li&gt;price&lt;/li&gt;&lt;li&gt;user_id&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#eeeeee;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;strokeColor=#36393d;fontColor=#000000;" parent="130" vertex="1">
+                <mxCell id="131" value="&lt;ul&gt;&lt;li&gt;name&lt;/li&gt;&lt;li&gt;content&lt;/li&gt;&lt;li&gt;category_id&lt;/li&gt;&lt;li&gt;condition_id&lt;/li&gt;&lt;li&gt;shipping_fee_id&lt;/li&gt;&lt;li&gt;prefecture_id&lt;/li&gt;&lt;li&gt;ship_day_id&lt;/li&gt;&lt;li&gt;price&lt;/li&gt;&lt;li&gt;user_id&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#eeeeee;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;strokeColor=#36393d;fontColor=#000000;" parent="130" vertex="1">
                     <mxGeometry width="210" height="220" as="geometry">
                         <mxRectangle width="210" height="220" as="alternateBounds"/>
                     </mxGeometry>
@@ -46,7 +46,7 @@
                 <mxCell id="136" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="135" vertex="1">
                     <mxGeometry y="30" width="230" height="180" as="geometry"/>
                 </mxCell>
-                <mxCell id="137" value="&lt;ul&gt;&lt;li&gt;post_code&lt;/li&gt;&lt;li&gt;prefecture&lt;/li&gt;&lt;li&gt;municipalities&lt;/li&gt;&lt;li&gt;block_number&lt;/li&gt;&lt;li&gt;building_name&lt;/li&gt;&lt;li&gt;phone_number&lt;/li&gt;&lt;li&gt;order_id&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#eeeeee;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;strokeColor=#36393d;fontColor=#000000;" parent="136" vertex="1">
+                <mxCell id="137" value="&lt;ul&gt;&lt;li&gt;post_code&lt;/li&gt;&lt;li&gt;prefecture_id&lt;/li&gt;&lt;li&gt;municipalities&lt;/li&gt;&lt;li&gt;block_number&lt;/li&gt;&lt;li&gt;building_name&lt;/li&gt;&lt;li&gt;phone_number&lt;/li&gt;&lt;li&gt;order_id&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#eeeeee;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;strokeColor=#36393d;fontColor=#000000;" parent="136" vertex="1">
                     <mxGeometry width="230" height="180" as="geometry">
                         <mxRectangle width="230" height="180" as="alternateBounds"/>
                     </mxGeometry>

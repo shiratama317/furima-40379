@@ -44,21 +44,20 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column             | Type       | Options                        |
-|--------------------|------------|--------------------------------|
-| name               | string     | null: false                    |
-| content            | text       | null: false                    |
-| category           | string     | null: false                    |
-| condition          | string     | null: false                    |
-| shipping_fee       | string     | null: false                    |
-| ship_from          | string     | null: false                    |
-| ship_days          | string     | null: false                    |
-| price              | integer    | null: false                    |
-| user               | references | null: false, foreign_key: true |
+| Column                | Type       | Options                        |
+|-----------------------|------------|--------------------------------|
+| name                  | string     | null: false                    |
+| content               | text       | null: false                    |
+| category_id           | integer    | null: false                    |
+| condition_id          | integer    | null: false                    |
+| shipping_fee_id       | integer    | null: false                    |
+| prefecture_id         | integer    | null: false                    |
+| ship_day_id           | integer    | null: false                    |
+| price                 | integer    | null: false                    |
+| user                  | references | null: false, foreign_key: true |
 
 ### Association
 
-- has_one_attached :image
 - belongs_to :user
 - has_one :order
 
@@ -82,7 +81,7 @@ Things you may want to cover:
 | Column             | Type       | Options                        |
 |--------------------|------------|--------------------------------|
 | post_code          | string     | null: false                    |
-| prefecture         | string     | null: false                    |
+| prefecture_id      | integer    | null: false                    |
 | municipalities     | string     | null: false                    |
 | block_number       | string     | null: false                    |
 | building_name      | string     |                                |
