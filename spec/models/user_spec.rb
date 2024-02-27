@@ -45,19 +45,24 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
       end
       it 'passwordが129文字以上では登録できない' do
-        @user.password = Faker::Internet.password(min_length: 129, max_length: 150)
+        @user.password = Faker::Alphanumeric.alphanumeric(number: 129, min_alpha: 1, min_numeric: 1)
         @user.valid?
         expect(@user.errors.full_messages).to include("Password is too long (maximum is 128 characters)")
       end
       it 'passwordが半角英字のみでは登録できない' do
         @user.password ='testtest'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password は英字と数字の両方を含めて設定してください")
+        expect(@user.errors.full_messages).to include("Password は半角で英字と数字の両方を含めて設定してください")
       end
       it 'passwordが半角数字のみでは登録できない' do
         @user.password ='123456'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password は英字と数字の両方を含めて設定してください")
+        expect(@user.errors.full_messages).to include("Password は半角で英字と数字の両方を含めて設定してください")
+      end
+      it 'passwordが全角では登録できない' do
+        @user.password = 'ｓｓｓｓｓｓ'
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Password は半角で英字と数字の両方を含めて設定してください")
       end
       it 'passwordとpassword_confirmationが不一致では登録できない' do
         @user.password = 'test12'
