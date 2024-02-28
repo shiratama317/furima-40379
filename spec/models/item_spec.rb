@@ -4,9 +4,9 @@ RSpec.describe Item, type: :model do
   before do
     @item = FactoryBot.build(:item)
   end
-  
+
   describe '商品出品機能' do
-    context '商品を出品できるとき'do
+    context '商品を出品できるとき' do
       it '必要な情報が存在すれば出品できる' do
         expect(@item).to be_valid
       end
@@ -60,22 +60,22 @@ RSpec.describe Item, type: :model do
       it '価格が299以下では出品できない' do
         @item.price = 299
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price は300~9,999,999(半角数値)の範囲内で設定してください")
+        expect(@item.errors.full_messages).to include('Price は300~9,999,999(半角数値)の範囲内で設定してください')
       end
       it '価格が10,000,000以上では出品できない' do
-        @item.price = 10000000
+        @item.price = 10_000_000
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price は300~9,999,999(半角数値)の範囲内で設定してください")
+        expect(@item.errors.full_messages).to include('Price は300~9,999,999(半角数値)の範囲内で設定してください')
       end
       it '価格が全角では出品できない' do
         @item.price = '１２３４'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price は300~9,999,999(半角数値)の範囲内で設定してください")
+        expect(@item.errors.full_messages).to include('Price は300~9,999,999(半角数値)の範囲内で設定してください')
       end
       it 'userが紐づいていないと出品できない' do
         @item.user = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("User must exist")
+        expect(@item.errors.full_messages).to include('User must exist')
       end
     end
   end
