@@ -4,7 +4,7 @@ function newItem (){
   itemPrice.addEventListener("input", () => {
     const addTaxPrice = document.getElementById("add-tax-price")
     addTaxPrice.innerHTML = Math.floor(itemPrice.value*0.1)
-    profit.innerHTML = (itemPrice.value - addTaxPrice.innerHTML)
+    profit.innerHTML = Math.floor(itemPrice.value - addTaxPrice.innerHTML)
   })
 }
 
