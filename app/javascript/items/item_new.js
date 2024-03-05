@@ -9,3 +9,4 @@ function newItem (){
 }
 
 window.addEventListener('turbo:load', newItem)
+window.addEventListener("turbo:render", newItem)
