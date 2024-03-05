@@ -25,22 +25,22 @@ RSpec.describe OrderAddress, type: :model do
       it '郵便番号にハイフンが含まれていない場合保存できない' do
         @order_address.post_code = '1234567'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Post code は3桁ハイフン4桁の半角数字で登録してください")
+        expect(@order_address.errors.full_messages).to include('Post code は3桁ハイフン4桁の半角数字で登録してください')
       end
       it '郵便番号が全角数値では保存できない' do
         @order_address.post_code = '１２３－４５６７'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Post code は3桁ハイフン4桁の半角数字で登録してください")
+        expect(@order_address.errors.full_messages).to include('Post code は3桁ハイフン4桁の半角数字で登録してください')
       end
       it '郵便番号が数値以外では保存できない' do
         @order_address.post_code = 'aaaaaaa'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Post code は3桁ハイフン4桁の半角数字で登録してください")
+        expect(@order_address.errors.full_messages).to include('Post code は3桁ハイフン4桁の半角数字で登録してください')
       end
       it '郵便番号が3桁ハイフン4桁以外では保存できない' do
         @order_address.post_code = '1234-567'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Post code は3桁ハイフン4桁の半角数字で登録してください")
+        expect(@order_address.errors.full_messages).to include('Post code は3桁ハイフン4桁の半角数字で登録してください')
       end
       it '都道府県が初期値では保存できない' do
         @order_address.prefecture_id = 1
@@ -65,27 +65,27 @@ RSpec.describe OrderAddress, type: :model do
       it '電話番号が全角数値では保存できない' do
         @order_address.phone_number = '０９０１２３４５６７８'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number は10桁または11桁の半角数字で登録してください")
+        expect(@order_address.errors.full_messages).to include('Phone number は10桁または11桁の半角数字で登録してください')
       end
       it '電話番号が数値以外では保存できない' do
         @order_address.phone_number = 'あああああ'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number は10桁または11桁の半角数字で登録してください")
+        expect(@order_address.errors.full_messages).to include('Phone number は10桁または11桁の半角数字で登録してください')
       end
       it '電話番号が9桁以下では保存できない' do
         @order_address.phone_number = '090123456'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number は10桁または11桁の半角数字で登録してください")
+        expect(@order_address.errors.full_messages).to include('Phone number は10桁または11桁の半角数字で登録してください')
       end
       it '電話番号が12桁以上では保存できない' do
         @order_address.phone_number = '090123456789'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number は10桁または11桁の半角数字で登録してください")
+        expect(@order_address.errors.full_messages).to include('Phone number は10桁または11桁の半角数字で登録してください')
       end
       it '電話番号がハイフンを含んでいる場合は保存できない' do
         @order_address.phone_number = '090-1234-5678'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number は10桁または11桁の半角数字で登録してください")
+        expect(@order_address.errors.full_messages).to include('Phone number は10桁または11桁の半角数字で登録してください')
       end
       it 'tokenが空では保存できない' do
         @order_address.token = nil
